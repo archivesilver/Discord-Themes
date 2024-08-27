@@ -1,0 +1,19 @@
+/**
+ * @name Disable Profile Effects
+ * @version 2024.04.14
+ * @author archivesilver
+ * @description Remove Discord's profile effects 
+ * @source https://github.com/archivesilver/Discord-Themes
+*/
+
+
+/* Disable the Profile Effect on the mini profile window */
+div[class^="profileEffects"], 
+
+/* Disable the Avatar Decoration on the user list */
+svg[class^="avatarDecoration"], 
+
+/* Disable the Avatar Decoration in the chat messages */
+img[class^="avatarDecoration"] {
+	display: none;
+}

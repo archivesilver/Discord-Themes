@@ -1,0 +1,47 @@
+/**
+ * @name Remove Junk
+ * @version 2024.08.23
+ * @author archivesilver
+ * @description Remove some annoying elements 
+ * @source https://github.com/archivesilver/Discord-Themes
+*/
+
+	/*INFO: SOME OF THESE SETTINGS DEPEND ON ITEM ORDER, SO DISCORD UPDATES MIGHT BREAK IT*/
+	/*If you are seeing some of the icons that are meant to be removed, disable/edit the theme*/
+	/*Known Issues: 
+		When there is a server problem on discord's side, some servers will be hidden. This is because of Compass and Download buttons setting.
+		When there is a new message request, it will be hidden. This is because of Shop button setting. 
+        Remove the related settings to avoid these problems. 
+		
+		So far all issues leave visual clues, so if you notice something weird, try disabling the theme. 
+	*/
+
+	/*removes Explore Compass and Download Apps icon from servers sidebar*/
+	/*ORDER SENSITIVE*/
+	nav[aria-label="Servers sidebar"] > ul > div[class^="scroller"] > div[class^="listItem_"]:nth-last-of-type(2),
+	nav[aria-label="Servers sidebar"] > ul > div[class^="scroller"] > div[class^="listItem_"]:nth-last-of-type(4),
+
+	/*removes server boost info and Event button from server channels list*/
+	div[class^="sidebar"] > nav > #channels > ul > li > div[data-list-item-id*="channels___boosts"],
+	div[class^="sidebar"] > nav > #channels > ul > li > div > div[id*="upcoming-events"] + div,
+
+	/*removes help button*/
+	section[aria-label="Channel header"] > div > div[class^="toolbar"] > a,
+	section[aria-labelledby^="uid"] > div > div[class^="toolbar"] > a,
+
+	/*removes Nitro and sticker buttons from chat*/
+	form div[class^="buttons_"] button[aria-label="Send a gift"],
+    form div[class^="buttons_"] button[aria-label="Open sticker picker"],
+    /*old order sensitive method*/
+	/*form div[class^="buttons_"] > div[class^="expression-picker-chat-input-button buttonContainer_"]:nth-last-of-type(2),*/
+
+	/*removes App Launcher button from the chat */
+	div[class^="channelAppLauncher"],
+
+	/*removes Shop button from direct messages page*/
+	ul[aria-label="Direct Messages"] a[href="/shop"],
+	
+	/*removes "Show All" button for voice channels*/
+	div[class^="voiceChannelsButton"]{
+		display: none;
+	}

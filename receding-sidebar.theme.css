@@ -1,0 +1,35 @@
+/**
+ * @name Receding Sidebar
+ * @version 2024.04.06
+ * @author archivesilver
+ * @description Make sidebar collapse until hovered 
+ * @source https://github.com/archivesilver/Discord-Themes
+*/
+
+:root {
+    --guild-mini: 24px;
+    --guild-max: 72px; /* default server list size */
+    --channel-mini: 36px;
+    --channel-max: 240px; /* default channel list size */
+}
+
+div[class^="base"] > div[class^="content"] > div[class^="sidebar"] {
+    width: 0px!important;
+    padding-left: var(--channel-mini)!important;
+    transition: all 0.4s;
+}
+div[class^="base"] > div[class^="content"] > div[class^="sidebar"]:hover {
+    transition-delay: 0s;
+    width: var(--channel-max)!important;
+    padding-left: initial!important;
+}
+nav[aria-label="Servers sidebar"][class*="guilds"] {
+    width: 0px!important;
+    padding-left: var(--guild-mini)!important;
+    transition: all 0.3s; 
+}
+nav[aria-label="Servers sidebar"][class*="guilds"]:hover {
+    transition-delay: 0.1s;
+    width: var(--guild-max)!important;
+    padding-left: initial!important;
+}
