@@ -1,6 +1,7 @@
 # About
 
-This project is a collection of small themes that aims to keep discord plain. The focus is on stability, familiarity, and austerity. 
+This project is a collection of small themes that aims to keep discord plain. The focus is on stability, familiarity, and austerity.  
+<ins>**Status:**</ins> All working as of `2024.10.08`
 
 # Configuration
 

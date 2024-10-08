@@ -1,6 +1,6 @@
 /**
  * @name Remove Junk
- * @version 2024.08.23
+ * @version 2024.10.08
  * @author archivesilver
  * @description Remove some annoying elements 
  * @source https://github.com/archivesilver/Discord-Themes
@@ -19,11 +19,12 @@
 	/*removes Explore Compass and Download Apps icon from servers sidebar*/
 	/*ORDER SENSITIVE*/
 	nav[aria-label="Servers sidebar"] > ul > div[class^="scroller"] > div[class^="listItem_"]:nth-last-of-type(2),
-	nav[aria-label="Servers sidebar"] > ul > div[class^="scroller"] > div[class^="listItem_"]:nth-last-of-type(4),
+	nav[aria-label="Servers sidebar"] > ul > div[class^="footer"],
 
 	/*removes server boost info and Event button from server channels list*/
-	div[class^="sidebar"] > nav > #channels > ul > li > div[data-list-item-id*="channels___boosts"],
-	div[class^="sidebar"] > nav > #channels > ul > li > div > div[id*="upcoming-events"] + div,
+	ul[aria-label="Channels"] > li:has(>div[data-list-item-id^="channels___boosts-"]),
+	ul[aria-label="Channels"] > li:has(> div > div[aria-label*="Event"]),
+	nav > div:has(> div[class^="channelNotice"]),
 
 	/*removes help button*/
 	section[aria-label="Channel header"] > div > div[class^="toolbar"] > a,
