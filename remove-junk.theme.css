@@ -36,8 +36,9 @@
     /*old order sensitive method*/
 	/*form div[class^="buttons_"] > div[class^="expression-picker-chat-input-button buttonContainer_"]:nth-last-of-type(2),*/
 
-	/*removes App Launcher button from the chat */
+	/*removes App Launcher button from the chat, and from the images overlay */
 	div[class^="channelAppLauncher"],
+    div:has(> div[aria-label="Edit Image with Apps"]),
 
 	/*removes Shop button from direct messages page*/
 	ul[aria-label="Direct Messages"] a[href="/shop"],
